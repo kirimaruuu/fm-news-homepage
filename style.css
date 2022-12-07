@@ -47,6 +47,11 @@ body {
   font-weight: var(--fw-regular);
 }
 
+/* js : prevent Scroll */
+body.scroll-prevent {
+  overflow-y: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -67,6 +72,7 @@ button {
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 /* Reusable */
@@ -119,7 +125,6 @@ button {
   background-color: var(--clr-neutral-100);
   transform: translateX(27rem);
   transition: transform .25s;
-  display: none;
 }
 .nav__menu.active {
   transform: translateX(0);
@@ -133,6 +138,10 @@ button {
 
 .nav__list-link {
   color: var(--clr-neutral-1000);
+  transition: color .25s;
+}
+.nav__list-link:hover {
+  color: var(--clr-primary-400);
 }
 
 .nav__close {
@@ -228,6 +237,46 @@ button {
 
 .separation-line {
   margin-bottom: 1rem;
+}
+
+/* card section */
+
+.card {
+  max-width: 100%;
+  padding: var(--nav-block);
+}
+
+.card__item {
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+  margin-block: 3rem;
+}
+
+.card__img {
+  max-width: 10rem;
+  max-height: 12rem; 
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} 
+
+.card__body > span {
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+}
+
+.card__title {
+  color: var(--clr-neutral-1000);
+}
+
+.card__paragraph {
+  color: var(--clr-neutral-500);
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
 
 /* footer */

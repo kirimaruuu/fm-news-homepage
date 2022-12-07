@@ -38,12 +38,12 @@
               <a href="" class="nav__list-link">Categories</a>
             </li>
           </ul>
-          <button class="btn btn-action nav__close" type="button" data-toggle="close">
-            <img class="icon" src="./assets/images/icon-menu-close.svg" alt="" />
+          <button class="btn btn-action nav__close" type="button">
+            <img data-toggle="close" class="icon" src="./assets/images/icon-menu-close.svg" alt="" />
           </button>
         </div>
-        <button class="btn btn-action nav__open" type="button" data-toggle="open">
-          <img class="icon" src="./assets/images/icon-menu.svg" alt="" />
+        <button class="btn btn-action nav__open" type="button">
+          <img data-toggle="open" class="icon" src="./assets/images/icon-menu.svg" alt="" />
         </button>
       </nav>
     </header>
@@ -83,8 +83,43 @@
       </aside>
     </main>
 
-        01 Reviving Retro PCs What happens when old PCs are given modern upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and budgets. 03 The Growth of Gaming How the pandemic has sparked fresh opportunities.
+    <!-- card section -->
+    <section class="card">
+      <div class="card__container">
+        <!-- item 1 -->
+        <div class="card__item">
+          <img class="card__img" src="./assets/images/image-retro-pcs.jpg" alt="" />
+          <div class="card__body">
+            <span>01</span>
+            <h3 class="card__title">Reviving Retro PCs</h3>
+            <p class="card__paragraph">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+
+        <!-- item 2 -->
+        <div class="card__item">
+          <img class="card__img" src="./assets/images/image-top-laptops.jpg" alt="" />
+          <div class="card__body">
+            <span>02</span>
+            <h3 class="card__title">Top 10 Laptops of 2022</h3>
+            <p class="card__paragraph">Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+
+        <!-- item 3 -->
+        <div class="card__item">
+          <img class="card__img" src="./assets/images/image-gaming-growth.jpg" alt="" />
+          <div class="card__body">
+            <span>03</span>
+            <h3 class="card__title">The Growth of Gaming</h3>
+            <p class="card__paragraph">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+
+    <script src="app.js"></script>
   </body>
 </html>
