@@ -146,6 +146,90 @@ button {
   height: 3rem;
 }
 
+/* main */
+
+.main {
+  padding-top: calc(var(--nav-block) * 2 + 3.4rem);
+  max-width: 100%;
+}
+
+.hero {
+  padding: var(--nav-block);
+}
+
+.hero__title {
+  font-size: 4.8rem;
+  line-height: 1;
+  margin-block: 2rem;
+  color: var(--clr-neutral-1000);
+}
+
+.body__paragraph {
+  color: var(--clr-neutral-500);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.body__btn {
+  display: inline-block;
+  background-color: var(--clr-primary-600);
+  color: #fff;
+  padding: 1.2rem 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: background-color .25s;
+  cursor: pointer;
+}
+.body__btn:hover {
+  background: #000;
+
+}
+
+/* new section */
+
+.new {
+  max-width: 100%;
+  padding: var(--nav-block);
+
+}
+
+.new__body {
+  padding-inline: 2.5rem;
+  background-color: var(--clr-neutral-1000);
+}
+
+.new__category {
+  font-size: 3.2rem;
+  color: var(--clr-primary-400);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.new__description {
+  padding-block: 1.5rem;
+}
+.new__description:last-child {
+  padding-bottom: 2rem;
+}
+
+.new__title {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.new__paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  line-height: 2.6rem;
+}
+
+.separation-line {
+  margin-bottom: 1rem;
+}
+
 /* footer */
 .attribution {
   font-size: 11px;
