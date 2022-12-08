@@ -13,3 +13,7 @@ const toggleMenu = () => {
 buttonOpen.addEventListener("click", toggleMenu)
 buttonClose.addEventListener("click", toggleMenu)
 menuElement.addEventListener("click", toggleMenu)
+
+window.addEventListener("resize", () => {
+  if (this.innerWidth >= 1100) if (menuElement.classList.contains("active")) toggleMenu()
+})

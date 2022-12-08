@@ -24,7 +24,7 @@
 }
 @media screen and (min-width: 1024px) {
   :root {
-    --nums-of-columns: 12;
+    --nums-of-columns: 11;
   }
 }
 
@@ -78,9 +78,15 @@ button {
 /* Reusable */
 
 .container {
-  max-width: 120rem;
+  max-width: 70rem;
   margin-inline: auto;
-  padding-inline: auto;
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    max-width: 90rem;
+    margin-inline: auto;
+  }
 }
 
 /* header : navigation */
@@ -100,14 +106,22 @@ button {
   padding: var(--nav-block);
 }
 
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+}
+
 /* nav overlay */
 .nav__overlay {
   position: fixed;
   inset: 0;
   visibility: hidden;
   opacity: 0;
-  background-color:  rgba(0,0,0,.2);
-  transition: background-color .25s;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.25s;
 }
 .nav__overlay.active {
   visibility: visible;
@@ -124,7 +138,7 @@ button {
   padding: 10rem 3rem;
   background-color: var(--clr-neutral-100);
   transform: translateX(27rem);
-  transition: transform .25s;
+  transition: transform 0.25s;
 }
 .nav__menu.active {
   transform: translateX(0);
@@ -138,7 +152,7 @@ button {
 
 .nav__list-link {
   color: var(--clr-neutral-1000);
-  transition: color .25s;
+  transition: color 0.25s;
 }
 .nav__list-link:hover {
   color: var(--clr-primary-400);
@@ -155,6 +169,26 @@ button {
   height: 3rem;
 }
 
+@media screen and (min-width: 1100px) {
+  .nav__menu {
+    position: initial;
+    width: initial;
+    background-color: transparent;
+    padding: 0;
+    transform: none;
+    transition: none;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+
+  .nav__open,
+  .nav__close {
+    display: none;
+  }
+}
+
 /* main */
 
 .main {
@@ -164,6 +198,11 @@ button {
 
 .hero {
   padding: var(--nav-block);
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 3.5rem 0;
+  }
 }
 
 .hero__title {
@@ -186,12 +225,44 @@ button {
   padding: 1.2rem 3.4rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  transition: background-color .25s;
+  transition: background-color 0.25s;
   cursor: pointer;
 }
 .body__btn:hover {
   background: #000;
+}
 
+@media screen and (min-width: 1100px) {
+  .flex {
+    display: flex;
+    column-gap: 2rem;
+    padding: 4rem 0 1rem;
+  }
+  .hero {
+    width: 70%;
+    padding: 0;
+  }
+  .hero__body {
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    column-gap: 3rem;
+  }
+  .hero__title {
+    text-align: start;
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-block: 0;
+  }
+  .body__description {
+    width: 100%;
+  }
+  .body__paragraph {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* new section */
@@ -199,7 +270,6 @@ button {
 .new {
   max-width: 100%;
   padding: var(--nav-block);
-
 }
 
 .new__body {
@@ -239,6 +309,40 @@ button {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .new {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .new {
+    width: 30%;
+    padding: 0;
+  }
+  .new__body {
+    padding-inline: 1rem 1.6rem;
+  }
+  .new__category {
+    font-size: 3rem;
+    padding-bottom: 0;
+  }
+  .new__description {
+    padding-block: 1rem;
+  }
+  .new__title {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    letter-spacing: initial;
+  }
+  .new__paragraph {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    line-height: 2 rem;
+  }
+}
+
 /* card section */
 
 .card {
@@ -255,14 +359,14 @@ button {
 
 .card__img {
   max-width: 10rem;
-  max-height: 12rem; 
+  max-height: 12rem;
 }
 
 .card__body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-} 
+}
 
 .card__body > span {
   font-size: 3rem;
@@ -277,6 +381,36 @@ button {
   color: var(--clr-neutral-500);
   font-size: 1.4rem;
   line-height: 1.6;
+}
+
+@media screen and (min-width: 1100px) {
+  .card {
+    padding: 0;
+  }
+  .card__container {
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+  }
+  .card__item {
+    width: 100%;
+    display: flex;
+    margin-block: 3rem;
+  }
+  .card__img {
+    max-width: 8rem;
+    max-height: 10rem;
+  }
+  .card__body > span {
+    font-size: 2.4rem;
+  }
+  .card__title {
+    font-size: 1.4rem;
+  }
+  .card__paragraph {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
 }
 
 /* footer */
